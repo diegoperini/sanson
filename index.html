@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="date.js"></script>
+    <script type="text/javascript" src="countdown.js"></script>
+
+</head>
+
+<body>
+    <h2>Şansonlar encore</h2>
+    <div class="clock" id="clock1">
+        <div class="slice">
+            <div data-value="days"></div><span class="unit">jours</span>
+        </div>
+        <div class="slice">
+            <div data-value="hours"></div><span class="unit">heures</span>
+        </div>
+        <div class="slice">
+            <div data-value="minutes"></div><span class="unit">minutes</span>
+        </div>
+        <div class="slice">
+            <div data-value="seconds"></div><span class="unit">secondes</span>
+        </div>
+    </div>
+    <script type="text/javascript">
+        const timer = new CountdownTimer({
+            selector: "#clock1",
+            targetDate: Date.parse("next saturday").add({ hours: 10 }),
+        });
+
+        timer.startTimer();
+    </script>
+</body>
+
+</html>

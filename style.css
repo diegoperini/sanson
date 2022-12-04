@@ -1,0 +1,33 @@
+body {
+    background-color: black;
+    color: white;
+    font-size: 3em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 3em;
+    text-align: center;
+}
+
+
+.unit {
+    margin-left: 10px;
+}
+
+
+.clock {
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.slice {
+    /* width: 5em; */
+    margin: 10px;
+    text-align: center;
+}
