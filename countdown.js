@@ -32,10 +32,10 @@ class CountdownTimer {
     }
 
     updateTimer({ days, hours, mins, secs }) {
-        this.refs.days.textContent = days;
-        this.refs.hours.textContent = hours;
-        this.refs.mins.textContent = mins;
-        this.refs.secs.textContent = secs;
+        this.refs.days.textContent = Math.max(0, days);
+        this.refs.hours.textContent = Math.max(0, hours);
+        this.refs.mins.textContent = Math.max(0, mins);
+        this.refs.secs.textContent = Math.max(0, secs);
     }
 
     updateColors() {
