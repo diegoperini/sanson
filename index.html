@@ -25,7 +25,7 @@
         </div>
     </div>
     <script type="text/javascript">
-        const scheduledHour = 15;
+        const scheduledHour = 10;
 
         let targetDate = Date.parse("next saturday").add({ hours: scheduledHour });
         if (Date.today().is().saturday() && ((Date.now() - Date.today()) / (1000 * 60 * 60)) < scheduledHour) {
