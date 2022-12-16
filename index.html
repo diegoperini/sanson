@@ -26,10 +26,11 @@
     </div>
     <script type="text/javascript">
         const scheduledHour = 10;
+        const scheduledMinute = 30;
 
-        let targetDate = Date.parse("next saturday").add({ hours: scheduledHour });
-        if (Date.today().is().saturday() && ((Date.now() - Date.today()) / (1000 * 60 * 60)) < scheduledHour) {
-            targetDate = Date.today().add({ hours: scheduledHour });
+        let targetDate = Date.parse("next saturday").add({ hours: scheduledHour, minutes: scheduledMinute });
+        if (Date.today().is().saturday() && ((Date.now() - Date.today()) / (1000 * 60 * 60)) < scheduledHour + (scheduledMinute / 60)) {
+            targetDate = Date.today().add({ hours: scheduledHour, minutes: scheduledMinute });
         }
 
         const timer = new CountdownTimer({
